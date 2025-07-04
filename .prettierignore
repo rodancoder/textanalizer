@@ -1,0 +1,8 @@
+build
+dist
+node_modules/
+*.css
+*.scss
+*.json
+*.html
+*.md

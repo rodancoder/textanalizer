@@ -1,0 +1,37 @@
+{
+  "name": "textanalizer",
+  "version": "1.0.0",
+  "description": "A lightweight web application that analyzes text input by counting characters, letters, words, sentences, and estimating reading time. Built with vanilla JavaScript for fast and simple text metrics.",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint --fix src/**/*.js",
+    "watch": "sass --watch ./src/styles/scss/index.scss:./src/styles/css/index.css"
+  },
+  "keywords": [
+    "text",
+    "text analysis",
+    "letter counter",
+    "word counter",
+    "character count",
+    "text statistics",
+    "text analyzer",
+    "text metrics",
+    "string analysis",
+    "readability"
+  ],
+  "author": "Rodrigo Andre Gutierrez Acuña <rodrigoandregutierrez@gmail.com>",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "^3.6.2",
+    "sass": "^1.89.2",
+    "standard": "^17.1.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json",
+      "prettier"
+    ]
+  }
+}
