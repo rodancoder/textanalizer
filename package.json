@@ -5,7 +5,8 @@
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint --fix src/**/*.js",
-    "watch": "sass --watch ./src/styles/scss/index.scss:./src/styles/css/index.css"
+    "watch": "sass --watch ./src/styles/scss/index.scss:./src/styles/css/index.css",
+    "prepare": "husky install"
   },
   "keywords": [
     "text",
@@ -24,9 +25,17 @@
   "type": "commonjs",
   "devDependencies": {
     "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
     "sass": "^1.89.2",
     "standard": "^17.1.2"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run lint",
+      "npm run format"
+    ]
   },
   "eslintConfig": {
     "extends": [
