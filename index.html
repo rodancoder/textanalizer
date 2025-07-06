@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextAnalizer</title>
+</head>
+<body>
+  <header class="header">
+    <span class="header__brand"></span>
+    <button class="header__btn">
+      <img src="./src/assets/svg/" alt="sun icon" aria-label="" class="header__icon">
+    </button>
+  </header>
+  <main class="main">
+    <div class="user-side">
+      <h1 class="user-side__heading">Analize your text in real-time.</h1>
+      <form class="user-side__form form">
+        <textarea name="textarea" id="textarea" placeholder="Start typing here... (or paste your text)"></textarea>
+        <div class="form__warn">
+          <span class="form__character-limit-warn">Character limit exceeded.</span>
+          <span class="form__character-limit-count">1</span>
+        </div>
+        <div class="form__wrapper">
+          <div class="form__actions">
+            <div class="form__field">
+              <label for="exclude-spaces" class="form__label">Exclude spaces</label>
+              <input type="checkbox" name="exclude-spaces" class="form__checkbox" id="exclude-spaces">
+            </div>
+            <div class="form__field">
+              <label for="character-limit" class="form__label">Set character limit</label>
+              <input type="checkbox" name="character-limit" class="form__checkbox" id="character-limit">
+            </div>
+          </div>
+          <div class="form__lecture-time lecture-time">
+            <span class="lecture-time__span">Approx. reading time: <span class="lecture-time__counter">0 minute</span></span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="analytics">
+      <ul class="analytics__list">
+        <li class="analytics__item">
+          <span class="analytics__counter" id="">00</span>
+          <span class="analytics__label">Total characters</span>
+        </li>
+        <li class="analytics__item">
+          <span class="analytics__counter" id="">00</span>
+          <span class="analytics__label">Word count</span>
+        </li>
+        <li class="analytics__item">
+          <span class="analytics__counter" id="">00</span>
+          <span class="analytics__label">Sentence count</span>
+        </li>
+      </ul>
+      <div class="density">
+        <h2 class="density__title">Letter density</h2>
+        <span class="density__span" id="density-empty-warn"></span>
+        <ul class="density__list">
+          <li class="density__item">
+            <span class="density__letter">A</span>
+            <div class="density__graphic-bar">
+              <div class="density__graphic-color"></div>
+            </div>
+            <div class="density__counter">
+              <span class="density__count">100</span>
+              <span class="density__percentage">(16.06%)</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
