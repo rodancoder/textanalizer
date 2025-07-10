@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TextAnalizer</title>
+  <link rel="stylesheet" href="./src/styles/css/index.css">
 </head>
 <body>
   <header class="header">
-    <span class="header__brand"></span>
+    <span class="header__brand">TextAnalizer</span>
     <button class="header__btn">
-      <img src="./src/assets/svg/" alt="sun icon" aria-label="" class="header__icon">
+      <img src="./src/assets/svg/sunny-outline.svg" alt="sun icon" aria-label="" class="header__icon">
     </button>
   </header>
   <main class="main">
     <div class="user-side">
       <h1 class="user-side__heading">Analize your text in real-time.</h1>
       <form class="user-side__form form">
-        <textarea name="textarea" class="user-side__textarea" id="textarea" placeholder="Start typing here... (or paste your text)"></textarea>
+        <textarea name="textarea" class="form__textarea" id="textarea" placeholder="Start typing here... (or paste your text)"></textarea>
         <div class="form__warn">
           <span class="form__character-limit-warn">Character limit exceeded.</span>
           <span class="form__character-limit-count">1</span>
@@ -55,7 +56,7 @@
       </ul>
       <div class="density">
         <h2 class="density__title">Letter density</h2>
-        <span class="density__span" id="density-empty-warn"></span>
+        <span class="density__span" id="density-empty-warn">No characters found. Start typing to see letter density.</span>
         <ul class="density__list">
           <li class="density__item">
             <span class="density__letter">A</span>
@@ -71,5 +72,8 @@
       </div>
     </div>
   </main>
+  <footer class="footer">
+    <span class="footer__copy">Made with ❤ by <a href="https://github.com/rodancoder" rel="noopener noreferrer" title="Visit my GitHub profile" class="footer__link">Rodan</a></span>
+  </footer>
 </body>
 </html>

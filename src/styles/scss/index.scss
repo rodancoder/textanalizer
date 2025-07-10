@@ -3,3 +3,236 @@
 @use "./abstracts/mixins" as m;
 @use "./abstracts/vars" as v;
 @use "./base/fonts" as f;
+
+body {
+  @include m.flexBox($ff: column nowrap, $jc: flex-start);
+  width: 100%;
+  height: 100%;
+  background-color: v.$background-dark;
+  color: v.$text-primary-dark;
+  font-family: v.$main-font;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header {
+  @include m.flexBox($jc: space-between);
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+
+  &__brand {
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  &__btn {
+    @include b.btn($p: .3rem);
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__icon {
+    filter: invert(100%) sepia(0%) saturate(7467%) hue-rotate(49deg) brightness(95%) contrast(111%);
+  }
+
+}
+
+.main {
+  @include m.flexBox($ff: column nowrap, $jc: flex-start);
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.user-side {
+  @include m.flexBox($ff: column nowrap);
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+}
+
+.form {
+  @include m.flexBox($ff: column nowrap);
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+
+  &__textarea {
+    width: 100%;
+    min-height: 10rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid v.$color-secondary-glass;
+    background-color: v.$background-dark-glass;
+  }
+
+  &__warn {
+    @include m.flexBox;
+    align-self: flex-end;
+    gap: 0.5rem;
+    font-size: .875em;
+    font-weight: 700;
+    color: v.$color-accent;
+    display: none;
+  }
+
+  &__wrapper {
+    @include m.flexBox($ff: column nowrap, $ai: flex-start);
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+  }
+
+  &__actions {
+    @include m.flexBox($ff: column nowrap, $ai: flex-start);
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+  }
+
+  &__field {
+    @include m.flexBox;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+  }
+
+  &__checkbox {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid v.$color-secondary;
+    border-radius: .3rem;
+  }
+
+}
+
+.lecture-time {
+  @include m.flexBox;
+  gap: 0.5rem;
+}
+
+.analytics {
+  @include m.flexBox($ff: column nowrap);
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+
+  &__list {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: .5rem;
+  }
+
+  &__item {
+    @include m.flexBox($ff: column nowrap, $ai: flex-start);
+    position: relative;
+    width: 100%;
+    height: 8rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: v.$color-primary-glass;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: v.$background-light;
+      width: 2rem;
+      height: 100%;
+      right: 0;
+      border-radius: .5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: v.$background-light-glass;
+      width: 2rem;
+      height: 100%;
+      right: 1rem;
+      top: 5%;
+      rotate: -10deg;
+      border-radius: 1rem;
+      z-index: -1;
+    }
+  }
+
+  &__counter {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+  }
+
+}
+
+.density {
+  @include m.flexBox($ff: column nowrap, $ai: flex-start);
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+
+ &__span {
+  font-size: .875;
+  display: none;
+ }
+
+ &__list {
+  @include m.flexBox($ff: column nowrap);
+  width: 100%;
+  height: 100%;
+  gap: .5rem;
+ }
+
+ &__item {
+  @include m.flexBox($jc: space-between);
+  width: 100%;
+  gap: 0.5rem;
+ }
+
+ &__graphic-bar {
+  @include m.flexBox($jc: flex-start);
+  width: 100%;
+  height: .875rem;
+  border-radius: 1rem;
+  background-color: v.$color-secondary-glass;
+ }
+
+ &__graphic-color {
+   width: 50%;
+   height: .875rem;
+   border-radius: 1rem;
+   background-color: v.$color-primary;
+ }
+
+ &__counter {
+  flex-shrink: 0;
+ }
+
+}
+
+.footer {
+  @include m.flexBox($ai: flex-end);
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+  padding: .5rem;
+}

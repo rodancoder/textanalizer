@@ -1,0 +1,422 @@
+/*---- Colors ----*/
+/* Backgrounds */
+/* Text Colors */
+/* Brand Colors */
+/* Secondary Colors */
+/* Buttons */
+/* Iconography */
+/*----fonts----*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+p a {
+  display: inline;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+::selection {
+  background-color: rgba(60, 120, 180, 0.6);
+  color: #f5f7fa;
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 900;
+  font-display: swap;
+}
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  color: #f5f7fa;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+}
+.header__brand {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.header__btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 0.3rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: #ffffff;
+  background-color: #3c78b4;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  transition: all 0.3s;
+  user-select: none;
+  box-shadow: 0 2px 4px;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+.header__btn:hover {
+  transition: all 0.2s;
+  background-color: #335a8a;
+  color: #ffffff;
+}
+.header__btn:active {
+  background-color: #2a4d70;
+  color: #e0e0e0;
+}
+.header__icon {
+  filter: invert(100%) sepia(0%) saturate(7467%) hue-rotate(49deg) brightness(95%) contrast(111%);
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.user-side {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+.form__textarea {
+  width: 100%;
+  min-height: 10rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(31, 31, 31, 0.7);
+}
+.form__warn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  gap: 0.5rem;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: #e94e77;
+  display: none;
+}
+.form__wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+.form__actions {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+.form__field {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+}
+.form__checkbox {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 0.3rem;
+}
+
+.lecture-time {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.analytics {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+}
+.analytics__list {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.analytics__item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 8rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(60, 120, 180, 0.6);
+  overflow: hidden;
+}
+.analytics__item::after {
+  content: "";
+  position: absolute;
+  background-color: #f5f7fa;
+  width: 2rem;
+  height: 100%;
+  right: 0;
+  border-radius: 0.5rem;
+}
+.analytics__item::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(245, 247, 250, 0.5);
+  width: 2rem;
+  height: 100%;
+  right: 1rem;
+  top: 5%;
+  rotate: -10deg;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.analytics__counter {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.analytics__label {
+  font-size: 1.2rem;
+}
+
+.density {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+}
+.density__span {
+  font-size: 0.875;
+  display: none;
+}
+.density__list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+.density__item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+.density__graphic-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 0.875rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.density__graphic-color {
+  width: 50%;
+  height: 0.875rem;
+  border-radius: 1rem;
+  background-color: #3c78b4;
+}
+.density__counter {
+  flex-shrink: 0;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+/*# sourceMappingURL=index.css.map */
